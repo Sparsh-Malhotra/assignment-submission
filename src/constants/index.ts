@@ -55,6 +55,7 @@ export const CandidatesColumnStyleConfig: Record<
 
 export const Candidates: CandidateType[] = [
   {
+    id: "1",
     name: "Ronald Richards",
     designation: "Cloud Consultant at Rapid Circle",
     status: "rejected",
@@ -64,8 +65,11 @@ export const Candidates: CandidateType[] = [
     holding_offer: false,
     verified: true,
     notice_period: "immediate",
+    email: "darrell.stewards@emaildomain.com",
+    phone: "+1 12345 67490",
   },
   {
+    id: "2",
     name: "Esther Howard",
     designation: "Cloud Consultant at Rapid Circle",
     status: "applied",
@@ -79,6 +83,7 @@ export const Candidates: CandidateType[] = [
     phone: "+1 12345 67490",
   },
   {
+    id: "3",
     name: "Leslie Alexander",
     designation: "Cloud Consultant at Rapid Circle",
     status: "applied",
@@ -92,6 +97,7 @@ export const Candidates: CandidateType[] = [
     phone: "+1 12345 67490",
   },
   {
+    id: "4",
     name: "Leslie Alexander",
     designation: "Cloud Consultant at Rapid Circle",
     status: "applied",
@@ -105,6 +111,7 @@ export const Candidates: CandidateType[] = [
     phone: "+1 12345 67490",
   },
   {
+    id: "5",
     name: "Darrell Steward",
     designation: "Cloud Consultant at Rapid Circle",
     status: "applied",
@@ -120,6 +127,7 @@ export const Candidates: CandidateType[] = [
     resume: "DarrellSteward.pdf",
   },
   {
+    id: "6",
     name: "Guy Hawkins",
     designation: "Cloud Consultant at Rapid Circle",
     status: "applied",
@@ -133,6 +141,7 @@ export const Candidates: CandidateType[] = [
     phone: "+1 12345 67490",
   },
   {
+    id: "7",
     name: "Cody Fisher",
     designation: "Cloud Consultant at Rapid Circle",
     status: "applied",
@@ -146,6 +155,7 @@ export const Candidates: CandidateType[] = [
     phone: "+1 12345 67490",
   },
   {
+    id: "8",
     name: "Dianne Russell",
     designation: "Cloud Consultant at Rapid Circle",
     status: "applied",
@@ -159,6 +169,7 @@ export const Candidates: CandidateType[] = [
     phone: "+1 12345 67490",
   },
   {
+    id: "9",
     name: "Wade Warren",
     designation: "Cloud Consultant at Rapid Circle",
     status: "shortlisted",
@@ -172,6 +183,7 @@ export const Candidates: CandidateType[] = [
     phone: "+1 12345 67490",
   },
   {
+    id: "10",
     name: "Darrell Steward",
     designation: "Cloud Consultant at Rapid Circle",
     status: "shortlisted",
@@ -185,6 +197,7 @@ export const Candidates: CandidateType[] = [
     phone: "+1 12345 67490",
   },
   {
+    id: "11",
     name: "Ralph Edwards",
     designation: "Cloud Consultant at Rapid Circle",
     status: "shortlisted",
@@ -198,6 +211,7 @@ export const Candidates: CandidateType[] = [
     phone: "+1 12345 67490",
   },
   {
+    id: "12",
     name: "Marvin McKinney",
     designation: "Cloud Consultant at Rapid Circle",
     status: "shortlisted",
@@ -211,6 +225,7 @@ export const Candidates: CandidateType[] = [
     phone: "+1 12345 67490",
   },
   {
+    id: "13",
     name: "Arlene McCoy",
     designation: "Cloud Consultant at Rapid Circle",
     status: "shortlisted",
@@ -224,6 +239,7 @@ export const Candidates: CandidateType[] = [
     phone: "+1 12345 67490",
   },
   {
+    id: "14",
     name: "Bessie Cooper",
     designation: "Cloud Consultant at Rapid Circle",
     status: "shortlisted",

@@ -1,4 +1,5 @@
 export type CandidateType = {
+  id: string;
   avatar?: string;
   name: string;
   designation: string;

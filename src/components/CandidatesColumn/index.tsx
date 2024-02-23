@@ -2,6 +2,11 @@ import { CandidatesColumnStyleConfig } from "@/constants";
 import { ICandidatesColumnProps } from "./CandidatesColumnProps";
 import Image from "next/image";
 import { CandidateCard } from "..";
+import dynamic from "next/dynamic";
+
+const Droppable = dynamic(() =>
+  import("@hello-pangea/dnd").then((module) => module.Droppable)
+);
 
 const CandidatesColumn = (props: ICandidatesColumnProps) => {
   const { type, candidates } = props;
@@ -36,11 +41,24 @@ const CandidatesColumn = (props: ICandidatesColumnProps) => {
           {type} • {CandidatesColumnStyleConfig[type].count}
         </p>
       </div>
-      <div className="flex flex-col items-center justify-center gap-2 p-2">
-        {candidates.map((candidate) => (
-          <CandidateCard details={candidate} />
-        ))}
-      </div>
+      <Droppable droppableId={type}>
+        {(provided) => (
+          <div
+            className="flex flex-col items-center justify-center gap-2 p-2"
+            ref={provided.innerRef}
+            {...provided.droppableProps}
+          >
+            {candidates.map((candidate, index) => (
+              <CandidateCard
+                key={candidate.id}
+                details={candidate}
+                index={index}
+              />
+            ))}
+            {provided.placeholder}
+          </div>
+        )}
+      </Droppable>
     </div>
   );
 };
