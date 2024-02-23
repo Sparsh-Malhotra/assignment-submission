@@ -99,7 +99,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className="flex items-center text-[10px] mt-6">
+              <div className="flex items-center text-chip mt-6">
                 <p className="text-[#6A737D]">Posted</p>
                 <p className="ml-[2px] font-[600]">1d ago</p>
                 <p className="text-[#6A737D] ml-2">by</p>

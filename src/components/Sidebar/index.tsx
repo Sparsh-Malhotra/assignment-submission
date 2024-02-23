@@ -1,6 +1,7 @@
 import { SidebarLinks } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
+import { MdArrowForward } from "react-icons/md";
 
 const Sidebar = () => {
   return (
@@ -52,12 +53,15 @@ const Sidebar = () => {
           />
           <div>
             <p className="text-sm">Loom</p>
-            <p className="text-[10px]">Manage jobs, teams, & more →</p>
+            <div className="flex items-center gap-[2px]">
+              <p className="text-chip">Manage jobs, teams, & more</p>
+              <MdArrowForward fontSize="12px" />
+            </div>
           </div>
         </div>
       </div>
       <div>
-        <div className="text-[rgb(106_115_125)] text-[10px] lg:mb-1 mb-6 leading-145 font-semibold text-left mr-4">
+        <div className="text-[rgb(106_115_125)] text-chip lg:mb-1 mb-6 leading-145 font-semibold text-left mr-4">
           <Link href="/" className="hover:underline">
             Blog
           </Link>
@@ -82,7 +86,7 @@ const Sidebar = () => {
             T&C
           </Link>
         </div>
-        <p className="text-[rgb(106_115_125)] text-[10px] text-left">
+        <p className="text-[rgb(106_115_125)] text-chip text-left">
           © 2023 Peerlist Inc.
         </p>
       </div>

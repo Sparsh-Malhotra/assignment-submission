@@ -19,6 +19,14 @@ const config: Config = {
       colors: {
         "nav-gray": "rgb(209 213 218)",
       },
+      fontSize: {
+        chip: [
+          "10px",
+          {
+            lineHeight: "14px",
+          },
+        ],
+      },
     },
   },
   plugins: [],

@@ -1,13 +1,14 @@
 import { CandidatesColumnStyleConfig } from "@/constants";
 import { ICandidatesColumnProps } from "./CandidatesColumnProps";
 import Image from "next/image";
+import { CandidateCard } from "..";
 
 const CandidatesColumn = (props: ICandidatesColumnProps) => {
-  const { type } = props;
+  const { type, candidates } = props;
 
   return (
     <div
-      className="rounded-lg border min-h-screen w-full overflow-hidden bg-[#FAFBFC]"
+      className="rounded-lg border min-h-[1440px] w-full overflow-hidden bg-[#FAFBFC]"
       style={{
         borderColor: CandidatesColumnStyleConfig[type].parentBorderColor,
       }}
@@ -34,6 +35,11 @@ const CandidatesColumn = (props: ICandidatesColumnProps) => {
         >
           {type} • {CandidatesColumnStyleConfig[type].count}
         </p>
+      </div>
+      <div className="flex flex-col items-center justify-center gap-2 p-2">
+        {candidates.map((candidate) => (
+          <CandidateCard details={candidate} />
+        ))}
       </div>
     </div>
   );
