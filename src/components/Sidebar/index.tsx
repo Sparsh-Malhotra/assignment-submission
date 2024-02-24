@@ -9,7 +9,7 @@ const Sidebar = () => {
       <Link href="/" className="my-3">
         <Image
           alt="logo"
-          src="/assets/Peerlist logo.svg"
+          src="/assets/Peerlist Logo.svg"
           width={124}
           height={32}
           loading="lazy"
