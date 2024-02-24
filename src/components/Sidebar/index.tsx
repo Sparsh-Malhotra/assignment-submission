@@ -17,7 +17,7 @@ const Sidebar = () => {
       </Link>
       <div className="pr-6 flex flex-col h-full">
         <div className="my-6">
-          {SidebarLinks.map((link) => (
+          {SidebarLinks.map((link, index) => (
             <Link
               key={link.title}
               href="/"
@@ -29,13 +29,17 @@ const Sidebar = () => {
                 width={24}
                 height={24}
               />
-              <p className="lg:ml-2 mt-2 lg:mt-0 transition-all lg:group-hover:translate-x-1 text-sm">
+              <p
+                className={`lg:ml-2 mt-2 lg:mt-0 transition-all lg:group-hover:translate-x-1 text-sm ${
+                  index === 0 && "font-semibold"
+                }`}
+              >
                 {link.title}
               </p>
             </Link>
           ))}
         </div>
-        <div className="flex items-center gap-2 mb-1 py-2">
+        <Link href="/" className="flex items-center gap-2 mb-1 py-2">
           <Image
             width={24}
             height={24}
@@ -43,8 +47,8 @@ const Sidebar = () => {
             alt="User Avatar"
           />
           <p className="text-sm">Yogini</p>
-        </div>
-        <div className="flex items-center gap-2 py-2">
+        </Link>
+        <Link href="/" className="flex items-center gap-2 py-2">
           <Image
             width={24}
             height={24}
@@ -58,7 +62,7 @@ const Sidebar = () => {
               <MdArrowForward fontSize="12px" />
             </div>
           </div>
-        </div>
+        </Link>
       </div>
       <div>
         <div className="text-[rgb(106_115_125)] text-chip lg:mb-1 mb-6 leading-145 font-semibold text-left mr-4">

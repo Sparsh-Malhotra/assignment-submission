@@ -32,27 +32,28 @@ const CandidatesColumn = (props: ICandidatesColumnProps) => {
             height={16}
           />
         ) : (
-          <div className="w-[14px] h-[14px] border-[1.5px] border-[#0D0D0D] rounded-full" />
+          <div className="w-4 h-4 border-[1.5px] border-[#0D0D0D] rounded-full" />
         )}
         <p
           className="uppercase text-xs font-semibold"
           style={{ color: CandidatesColumnStyleConfig[type].color }}
         >
-          {type} • {CandidatesColumnStyleConfig[type].count}
+          {type} • {candidates.length}
         </p>
       </div>
       <Droppable droppableId={type}>
         {(provided) => (
           <div
+            key={type}
             className="flex flex-col items-center justify-center gap-2 p-2"
             ref={provided.innerRef}
             {...provided.droppableProps}
           >
-            {candidates.map((candidate, index) => (
+            {candidates.map((candidate) => (
               <CandidateCard
                 key={candidate.id}
                 details={candidate}
-                index={index}
+                index={candidate.index}
               />
             ))}
             {provided.placeholder}

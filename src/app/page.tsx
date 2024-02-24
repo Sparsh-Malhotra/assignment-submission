@@ -54,50 +54,38 @@ export default function Home() {
               id="container"
             >
               <div className="flex items-center justify-end gap-[10px]">
-                <div
-                  className="rounded-full bg-white w-6 h-6 border border-[#D1D5DA] grid place-items-center hover:bg-[rgb(246_248_250)]"
-                  role="button"
-                >
+                <button className="rounded-full bg-white w-6 h-6 border border-[#D1D5DA] grid place-items-center hover:bg-[rgb(246_248_250)]">
                   <Image
                     src="/assets/Edit Icon.svg"
                     alt="edit"
                     width={15}
                     height={15}
                   />
-                </div>
-                <div
-                  className="rounded-full bg-white w-6 h-6 border border-[#D1D5DA] grid place-items-center hover:bg-[rgb(246_248_250)]"
-                  role="button"
-                >
+                </button>
+                <button className="rounded-full bg-white w-6 h-6 border border-[#D1D5DA] grid place-items-center hover:bg-[rgb(246_248_250)]">
                   <Image
                     src="/assets/Share Icon.svg"
                     alt="edit"
                     width={15}
                     height={15}
                   />
-                </div>
-                <div
-                  className="rounded-full bg-white w-6 h-6 border border-[#D1D5DA] grid place-items-center hover:bg-[rgb(246_248_250)]"
-                  role="button"
-                >
+                </button>
+                <button className="rounded-full bg-white w-6 h-6 border border-[#D1D5DA] grid place-items-center hover:bg-[rgb(246_248_250)]">
                   <Image
                     src="/assets/New Tab Icon.svg"
                     alt="edit"
                     width={15}
                     height={15}
                   />
-                </div>
-                <div
-                  className="rounded-full bg-white w-6 h-6 border border-[#D1D5DA] grid place-items-center hover:bg-[rgb(246_248_250)]"
-                  role="button"
-                >
+                </button>
+                <button className="rounded-full bg-white w-6 h-6 border border-[#D1D5DA] grid place-items-center hover:bg-[rgb(246_248_250)]">
                   <Image
                     src="/assets/Three Dots Icon.svg"
                     alt="edit"
                     width={15}
                     height={15}
                   />
-                </div>
+                </button>
               </div>
               <div className="flex items-center text-chip mt-6">
                 <p className="text-[#6A737D]">Posted</p>

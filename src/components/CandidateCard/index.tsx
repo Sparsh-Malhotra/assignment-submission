@@ -28,15 +28,46 @@ const CandidateCard = ({
         >
           <div className="w-full">
             <div className="flex items-start justify-between w-full">
-              <div>
-                {!details.isExternal && (
-                  <Image
-                    src="/assets/User Avatar.svg"
-                    alt="candidate avatar"
-                    width={32}
-                    height={32}
-                  />
-                )}
+              <div className="w-full">
+                <div className="flex justify-between items-center w-full">
+                  {!details.isExternal && (
+                    <Image
+                      src="/assets/User Avatar.svg"
+                      alt="candidate avatar"
+                      width={32}
+                      height={32}
+                      className=""
+                    />
+                  )}
+                  {details.isMatched ? (
+                    <div className="rounded-3xl p-[2px] pr-2 flex items-center bg-[#E2F5EA] gap-1">
+                      <Image
+                        alt="peerlist logo"
+                        src="/assets/Peerlist Avatar.svg"
+                        width={16}
+                        height={16}
+                      />
+                      <p className="text-[#219653] font-semibold text-chip">
+                        Matched
+                      </p>
+                    </div>
+                  ) : details.referrer ? (
+                    <p className="text-chip text-[#6A737D] flex justify-end items-center gap-2">
+                      Ref by{" "}
+                      <Image
+                        src="/assets/Referrer.svg"
+                        alt="referrer"
+                        width={16}
+                        height={16}
+                      />
+                      <span className="font-semibold">{details.referrer}</span>
+                    </p>
+                  ) : (
+                    <p className="text-chip text-[#6A737D] h-fit">
+                      Applied {details.applied_date} ago
+                    </p>
+                  )}
+                </div>
                 <div
                   className="flex items-center gap-1"
                   style={{
@@ -54,23 +85,6 @@ const CandidateCard = ({
                   )}
                 </div>
               </div>
-              {details.isMatched ? (
-                <div className="rounded-3xl p-[2px] pr-2 flex items-center bg-[#E2F5EA] gap-1">
-                  <Image
-                    alt="peerlist logo"
-                    src="/assets/Peerlist Avatar.svg"
-                    width={16}
-                    height={16}
-                  />
-                  <p className="text-[#219653] font-semibold text-chip">
-                    Matched
-                  </p>
-                </div>
-              ) : (
-                <p className="text-chip text-[#6A737D] h-fit">
-                  Applied {details.applied_date} ago
-                </p>
-              )}
             </div>
             <p className="text-xs">{details.designation}</p>
             <div className="flex items-center mt-2 gap-4">

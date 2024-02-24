@@ -15,4 +15,5 @@ export type CandidateType = {
   isMatched?: boolean;
   verified: boolean;
   isExternal?: boolean;
+  referrer?: string;
 };
