@@ -107,8 +107,8 @@ const CandidatesManagement = () => {
   };
 
   return (
-    <section className="p-6">
-      <div className="flex items-center gap-2 border hover:border-[rgb(149_157_165)] rounded py-1 px-2 w-[240px] focus-within:border focus-within:border-[rgb(149_157_165)]">
+    <section className="p-6 mobile:pb-28">
+      <div className="flex items-center gap-2 border hover:border-[rgb(149_157_165)] rounded py-1 px-2 w-[240px] focus-within:border focus-within:border-[rgb(149_157_165)] mobile:w-full">
         <Image alt="search" src="/assets/Search.svg" width={16} height={16} />
         <input
           placeholder="Search candidates"
@@ -116,7 +116,7 @@ const CandidatesManagement = () => {
           onChange={handleSearch}
         />
       </div>
-      <div className="mt-6 flex items-start gap-2">
+      <div className="mt-6 flex items-start gap-2 mobile:flex-col">
         <DragDropContext onDragEnd={handleDropEnd}>
           <CandidatesColumn type="rejected" candidates={rejectedCandidates} />
           <CandidatesColumn type="applied" candidates={appliedCandidates} />

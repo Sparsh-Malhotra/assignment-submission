@@ -13,7 +13,7 @@ const CandidatesColumn = (props: ICandidatesColumnProps) => {
 
   return (
     <div
-      className="rounded-lg border min-h-[1440px] w-full overflow-hidden bg-[#FAFBFC]"
+      className="rounded-lg border min-h-[1440px] w-full overflow-hidden bg-[#FAFBFC] mobile:min-h-fit"
       style={{
         borderColor: CandidatesColumnStyleConfig[type].parentBorderColor,
       }}

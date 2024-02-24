@@ -1,4 +1,5 @@
-import { CandidatesManagement, Sidebar } from "@/components";
+import { CandidatesManagement, Navbar, Sidebar } from "@/components";
+import BottomNavbar from "@/components/BottomNavbar";
 import Image from "next/image";
 
 export default function Home() {
@@ -7,15 +8,52 @@ export default function Home() {
       <section className="flex lg:w-[1200px] min-h-screen w-full mx-auto">
         <Sidebar />
         <section className="w-full h-full border-r border-[#E1E4E8] overflow-y-auto lg:pl-[212px]">
-          <div className="bg-[#FAFBFC] py-10 px-6 border-b border-[#E1E4E8] flex items-start justify-between w-full h-full">
-            <div className="flex items-start gap-4 h-full">
-              <div className="rounded-2xl w-14 h-14 p-2 border border-[#E1E4E8]">
-                <Image
-                  src="/assets/Peerlist Avatar.svg"
-                  alt="job company logo"
-                  width={40}
-                  height={40}
-                />
+          <Navbar />
+          <div className="bg-[#FAFBFC] py-10 mobile:py-4 px-6 border-b border-[#E1E4E8] flex items-start justify-between w-full h-full">
+            <div className="flex items-start gap-4 h-full mobile:flex-col">
+              <div className="mobile:flex mobile:justify-between mobile:w-full">
+                <div className="rounded-2xl w-14 h-14 p-2 border border-[#E1E4E8]">
+                  <Image
+                    src="/assets/Peerlist Avatar.svg"
+                    alt="job company logo"
+                    width={40}
+                    height={40}
+                  />
+                </div>
+                <div className="hidden mobile:flex items-center justify-end gap-[10px]">
+                  <button className="rounded-full bg-white w-6 h-6 border border-[#D1D5DA] grid place-items-center hover:bg-[rgb(246_248_250)]">
+                    <Image
+                      src="/assets/Edit Icon.svg"
+                      alt="edit"
+                      width={15}
+                      height={15}
+                    />
+                  </button>
+                  <button className="rounded-full bg-white w-6 h-6 border border-[#D1D5DA] grid place-items-center hover:bg-[rgb(246_248_250)]">
+                    <Image
+                      src="/assets/Share Icon.svg"
+                      alt="edit"
+                      width={15}
+                      height={15}
+                    />
+                  </button>
+                  <button className="rounded-full bg-white w-6 h-6 border border-[#D1D5DA] grid place-items-center hover:bg-[rgb(246_248_250)]">
+                    <Image
+                      src="/assets/New Tab Icon.svg"
+                      alt="edit"
+                      width={15}
+                      height={15}
+                    />
+                  </button>
+                  <button className="rounded-full bg-white w-6 h-6 border border-[#D1D5DA] grid place-items-center hover:bg-[rgb(246_248_250)]">
+                    <Image
+                      src="/assets/Three Dots Icon.svg"
+                      alt="edit"
+                      width={15}
+                      height={15}
+                    />
+                  </button>
+                </div>
               </div>
               <div className="flex flex-col gap-6">
                 <div>
@@ -36,7 +74,7 @@ export default function Home() {
                     at Peerlist • Full time • Remote (United States, Canada)
                   </p>
                 </div>
-                <div className="flex items-center justify-between text-xs">
+                <div className="flex items-center justify-between text-xs mobile:justify-start mobile:gap-4">
                   <p>
                     <span className="font-[600]">78</span> Candidates
                   </p>
@@ -53,7 +91,7 @@ export default function Home() {
               className="flex flex-col justify-between gap-6 h-fit"
               id="container"
             >
-              <div className="flex items-center justify-end gap-[10px]">
+              <div className="flex items-center justify-end gap-[10px] mobile:hidden">
                 <button className="rounded-full bg-white w-6 h-6 border border-[#D1D5DA] grid place-items-center hover:bg-[rgb(246_248_250)]">
                   <Image
                     src="/assets/Edit Icon.svg"
@@ -87,7 +125,7 @@ export default function Home() {
                   />
                 </button>
               </div>
-              <div className="flex items-center text-chip mt-6">
+              <div className="flex items-center text-chip mt-6 mobile:hidden">
                 <p className="text-[#6A737D]">Posted</p>
                 <p className="ml-[2px] font-[600]">1d ago</p>
                 <p className="text-[#6A737D] ml-2">by</p>
@@ -105,6 +143,7 @@ export default function Home() {
           <CandidatesManagement />
         </section>
       </section>
+      <BottomNavbar />
     </main>
   );
 }
